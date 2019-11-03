@@ -1,0 +1,28 @@
+2019-11-03 20:01:00 INFO  App:21 - dalee
+2019-11-03 20:02:00 INFO  App:21 - Starting project
+2019-11-03 20:02:00 INFO  App:45 - Solução inicial = [30, 25, 20, 15, 10]e retorno = 0.2097935
+2019-11-03 20:02:00 INFO  App:57 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292
+2019-11-03 20:02:00 INFO  App:45 - Solução inicial = [25, 30, 20, 15, 10]e retorno = 0.20149000000000003
+2019-11-03 20:02:00 INFO  App:57 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292
+2019-11-03 20:02:00 INFO  App:45 - Solução inicial = [20, 25, 30, 15, 10]e retorno = 0.17162950000000002
+2019-11-03 20:02:00 INFO  App:57 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292
+2019-11-03 20:02:00 INFO  App:45 - Solução inicial = [15, 25, 20, 30, 10]e retorno = 0.1550735
+2019-11-03 20:02:00 INFO  App:57 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292
+2019-11-03 20:02:00 INFO  App:45 - Solução inicial = [10, 25, 20, 15, 30]e retorno = 0.1286715
+2019-11-03 20:02:00 INFO  App:57 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292
+2019-11-03 20:04:15 INFO  App:21 - Iniciando aplicação
+2019-11-03 20:04:15 INFO  App:38 - Iniciando simulação=1
+2019-11-03 20:04:15 INFO  App:48 - Solução inicial = [30, 25, 20, 15, 10]e retorno = 0.2097935
+2019-11-03 20:04:15 INFO  App:60 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292
+2019-11-03 20:04:15 INFO  App:38 - Iniciando simulação=2
+2019-11-03 20:04:15 INFO  App:48 - Solução inicial = [25, 30, 20, 15, 10]e retorno = 0.20149000000000003
+2019-11-03 20:04:15 INFO  App:60 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292
+2019-11-03 20:04:15 INFO  App:38 - Iniciando simulação=3
+2019-11-03 20:04:15 INFO  App:48 - Solução inicial = [20, 25, 30, 15, 10]e retorno = 0.17162950000000002
+2019-11-03 20:04:15 INFO  App:60 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292
+2019-11-03 20:04:15 INFO  App:38 - Iniciando simulação=4
+2019-11-03 20:04:15 INFO  App:48 - Solução inicial = [15, 25, 20, 30, 10]e retorno = 0.1550735
+2019-11-03 20:04:15 INFO  App:60 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292
+2019-11-03 20:04:15 INFO  App:38 - Iniciando simulação=5
+2019-11-03 20:04:15 INFO  App:48 - Solução inicial = [10, 25, 20, 15, 30]e retorno = 0.1286715
+2019-11-03 20:04:15 INFO  App:60 - Melhor solução é = [100, 0, 0, 0, 0]e retorno = 0.42292

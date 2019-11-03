@@ -12,13 +12,13 @@ import org.apache.log4j.Logger;
  */
 public class App {
 
-	private static final Logger lOG = new FileLogger().getLogger();
+	private static Logger LOG = Logger.getLogger(App.class);
 
 	private static final Double[] RETORNO_ANUAL = { 0.42292, 0.25685, 0.04128, 0.05812, 0.01731 };
 
 	public static void main(String[] args) {
 
-		System.out.println("Starting project");
+		LOG.info("Iniciando aplicação");
 
 		Integer[] initialSolution1 = { 30, 25, 20, 15, 10 };
 
@@ -33,7 +33,10 @@ public class App {
 		List<Integer[]> solutions = Arrays.asList(initialSolution1, initialSolution2, initialSolution3,
 				initialSolution4, initialSolution5);
 
+		int cont = 1;
 		for (Integer[] solution : solutions) {
+			LOG.info("Iniciando simulação=" + cont);
+			cont++;
 			new App().start(solution);
 		}
 	}
@@ -42,8 +45,9 @@ public class App {
 		Integer[] bestSolution = solution;
 		Integer[] bestNeighbor = null;
 
-		System.out.println("Solução inicial = " + Arrays.toString(solution) + "e retorno = " + calcReturn(solution));
+		LOG.info("Solução inicial = " + Arrays.toString(solution) + " e retorno = " + calcReturn(solution));
 		do {
+			LOG.info("Gerando vizinhos");
 			List<Integer[]> neighbors = getNeighbors(bestSolution);
 
 			bestNeighbor = getBestNeighbor(neighbors, bestSolution);
@@ -54,8 +58,7 @@ public class App {
 			}
 		} while (bestNeighbor != null);
 
-		System.out.println(
-				"Melhor solução é = " + Arrays.toString(bestSolution) + "e retorno = " + calcReturn(bestSolution));
+		LOG.info("Melhor solução é = " + Arrays.toString(bestSolution) + " e retorno = " + calcReturn(bestSolution));
 
 	}
 
