@@ -35,9 +35,10 @@ public class App {
 
 		int cont = 1;
 		for (Integer[] solution : solutions) {
-			LOG.info("Iniciando simulação=" + cont);
-			cont++;
+			LOG.info("#### -> Iniciando simulação=" + cont + " <- ####");
 			new App().start(solution);
+			LOG.info("#### -> Finalizando simulação=" + cont + " <- ####");
+			cont++;
 		}
 	}
 
@@ -45,7 +46,8 @@ public class App {
 		Integer[] bestSolution = solution;
 		Integer[] bestNeighbor = null;
 
-		LOG.info("Solução inicial = " + Arrays.toString(solution) + " e retorno = " + calcReturn(solution));
+		LOG.info(" ## Solução inicial = " + Arrays.toString(solution) + " e retorno = " + calcReturn(solution));
+		int n = 1;
 		do {
 			LOG.info("Gerando vizinhos");
 			List<Integer[]> neighbors = getNeighbors(bestSolution);
@@ -53,7 +55,8 @@ public class App {
 			bestNeighbor = getBestNeighbor(neighbors, bestSolution);
 
 			if (bestNeighbor != null) {
-
+				LOG.info("Melhor vizinho encontrado iteração:" + (n++) + " Vizinho=" + Arrays.toString(bestNeighbor)
+						+ " e retorno = " + calcReturn(bestNeighbor));
 				bestSolution = bestNeighbor;
 			}
 		} while (bestNeighbor != null);
