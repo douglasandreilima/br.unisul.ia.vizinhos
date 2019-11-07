@@ -21,22 +21,9 @@ public class App {
 
 		LOG.info("Iniciando aplicação");
 
-		Integer[] initialSolution1 = { 30, 25, 20, 15, 10 };
-
-		Integer[] initialSolution2 = { 25, 30, 20, 15, 10 };
-
-		Integer[] initialSolution3 = { 20, 25, 30, 15, 10 };
-
-		Integer[] initialSolution4 = { 15, 25, 20, 30, 10 };
-
-		Integer[] initialSolution5 = { 10, 25, 20, 15, 30 };
-
-		List<Integer[]> solutions = Arrays.asList(initialSolution1, initialSolution2, initialSolution3,
-				initialSolution4, initialSolution5);
+		List<Integer[]> solutions = drawSolutions();
 
 		int cont = 1;
-
-		solutions = drawSolutions();
 		for (Integer[] solution : solutions) {
 			LOG.info("#### -> Iniciando simulação=" + cont + " <- ####");
 			new App().start(solution);
@@ -67,6 +54,9 @@ public class App {
 			LOG.info("Gerando vizinhos");
 			List<Integer[]> neighbors = getNeighbors(bestSolution);
 
+			for (Integer[] integers : neighbors) {
+				System.out.println(Arrays.toString(integers));
+			}
 			bestNeighbor = getBestNeighbor(neighbors, bestSolution);
 
 			if (bestNeighbor != null) {
