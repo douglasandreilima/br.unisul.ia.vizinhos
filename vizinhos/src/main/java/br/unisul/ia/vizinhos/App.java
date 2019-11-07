@@ -2,6 +2,7 @@ package br.unisul.ia.vizinhos;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -34,12 +35,26 @@ public class App {
 				initialSolution4, initialSolution5);
 
 		int cont = 1;
+
+		solutions = drawSolutions();
 		for (Integer[] solution : solutions) {
 			LOG.info("#### -> Iniciando simulação=" + cont + " <- ####");
 			new App().start(solution);
 			LOG.info("#### -> Finalizando simulação=" + cont + " <- ####");
 			cont++;
 		}
+	}
+
+	private static List<Integer[]> drawSolutions() {
+		List<Integer> values = Arrays.asList(30, 25, 20, 15, 10);
+		List<Integer[]> solutions = new ArrayList<Integer[]>();
+
+		for (int i = 0; i < 5; i++) {
+			Integer[] solution = (Integer[]) values.toArray();
+			solutions.add(solution);
+			Collections.shuffle(values);
+		}
+		return solutions;
 	}
 
 	private void start(Integer[] solution) {
